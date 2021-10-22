@@ -39,26 +39,28 @@ class ViewController: UIViewController {
         greenLabel.font = UIFont(name: "Snell Roundhand Bold", size: 20)
         blueLabel.font = UIFont(name: "Snell Roundhand Bold", size: 20)
         
-        colorField.backgroundColor = UIColor(
+        colorField.backgroundColor  = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
-                alpha:1.0
-            )
-    }
+            alpha:1.0
+        )
+            }
     
     
-    @IBAction func colorSetting() {
-        redLabel.text = String(format: "%.2f", redSlider.value)
+ 
+    @IBAction func colorSetting(_ sender: UISlider ) {
+    
+    redLabel.text = String(format: "%.2f", redSlider.value)
         greenLabel.text = String(format: "%.2f", greenSlider.value)
         blueLabel.text = String(format: "%.2f", blueSlider.value)
         
-        colorField.backgroundColor = UIColor(
+        colorField.backgroundColor  = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
-                alpha:1.0
-            )
+            alpha:1.0
+        )
     }
     
         
