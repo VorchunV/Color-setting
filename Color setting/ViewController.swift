@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     
     @IBOutlet var colorField: UIView!
     
@@ -31,10 +31,11 @@ class ViewController: UIViewController {
         greenSlider.maximumValue = 1
         blueSlider.maximumValue = 1
         
-        redLabel.text = String(redSlider.value)
-        greenLabel.text = String(greenSlider.value)
-        blueLabel.text = String(blueSlider.value)
+        redLabel.text = String(format: "%.2f", redSlider.value)
+        greenLabel.text = String(format: "%.2f", greenSlider.value)
+        blueLabel.text = String(format: "%.2f", blueSlider.value)
         
+        //        Попробовала реализовать настройку лейбла через код
         redLabel.font = UIFont(name: "Snell Roundhand Bold" , size: 20)
         greenLabel.font = UIFont(name: "Snell Roundhand Bold", size: 20)
         blueLabel.font = UIFont(name: "Snell Roundhand Bold", size: 20)
@@ -45,13 +46,13 @@ class ViewController: UIViewController {
             blue: CGFloat(blueSlider.value),
             alpha:1.0
         )
-            }
+    }
     
     
- 
+    
     @IBAction func colorSetting(_ sender: UISlider ) {
-    
-    redLabel.text = String(format: "%.2f", redSlider.value)
+        
+        redLabel.text = String(format: "%.2f", redSlider.value)
         greenLabel.text = String(format: "%.2f", greenSlider.value)
         blueLabel.text = String(format: "%.2f", blueSlider.value)
         
@@ -63,11 +64,8 @@ class ViewController: UIViewController {
         )
     }
     
-        
-        
-        
-    }
-    
-    
-    
+}
+
+
+
 
